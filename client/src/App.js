@@ -3,10 +3,6 @@ import Chart from './components/Chart';
 import axios from 'axios';
 import './App.css';
 
-const backgroundColor = [
-  'rgba(255, 99, 132, 0.6)'
-]
-
 const App = () => {
   const [chartData, setChartData] = useState({
     labels: [],
@@ -14,7 +10,7 @@ const App = () => {
       {
         label: 'RupeeValue',
         data: [],
-        backgroundColor: ''
+        backgroundColor:''
       }
     ]
   });
@@ -33,7 +29,6 @@ const App = () => {
 
       let dates = [];
       let values = [];
-
       data.forEach(e => dates.push(e.Date));
       data.forEach(e => values.push(parseInt(e.Price,10)))
 
@@ -44,7 +39,7 @@ const App = () => {
           {
             label: 'RupeeValue',
             data: values,
-            backgroundColor: backgroundColor
+            backgroundColor: 'rgba(255, 99, 132, 0.6)' 
           }
         ]
       });

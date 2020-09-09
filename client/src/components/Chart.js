@@ -8,7 +8,7 @@ const Chart = ({title,data}) => {
             <Bar
             data={data}
             width={100}
-            height={50} 
+            height={50}
             />
         </div>
     )

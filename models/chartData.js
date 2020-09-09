@@ -10,6 +10,6 @@ const chartDataSchema = new Schema({
         type: String,
         required: true
     }
-});
+},{collection: 'chartData'});
 
 module.exports = chartData = mongoose.model('chartData', chartDataSchema);

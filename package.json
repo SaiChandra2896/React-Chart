@@ -1,0 +1,20 @@
+{
+  "name": "chart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "sai chandra",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "mongodb": "^3.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}

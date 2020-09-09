@@ -1,18 +1,9 @@
-const csvtojson = require('csvtojson');
-const mongodb = require('mongodb').MongoClient;
+const express = require('express');
+const connectDB = require('./config/db');
+const app = express();
 
-const url = 'mongodb+srv://sai:12345@chart.v3cnm.mongodb.net/chart?retryWrites=true&w=majority';
+connectDB();
 
-csvtojson().fromFile('data.csv').then(csvData =>{
-    // console.log(csvData);
-    mongodb.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true }, (err,client) =>{
-        if (err) console.log(err);
-        client.db('chart').collection('chartData').insertMany(csvData,(err,res) =>{
-            if(err){
-                console.log(err, 'from client')
-            }
-            console.log(`Inserted: ${res.insertedCount} rows`);
-            client.close() 
-        });
-    })
-})
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));

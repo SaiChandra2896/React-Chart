@@ -55,6 +55,7 @@ const App = () => {
       </h4>
       {dataState && <Chart data={chartData} title="Doller to INR plot" />}
       <button>button</button>
+      <button>Test</button>
     </div>
   );
 };
